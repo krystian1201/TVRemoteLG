@@ -56,12 +56,10 @@ public class MainActivity extends Activity
 			public void onClick(View arg0) 
 			{
 				
-				
 				//MediaPlayer mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.lg_power);
-				
 				//mediaPlayer.setVolume(0.9f, 0.9f);
-				
 				//mediaPlayer.setDataSource(getBaseContext(), new Uri(R.raw.lg_ch_up));
+				
 				final MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.lg_power);
 			
 				mediaPlayer.setOnCompletionListener(new OnCompletionListener() 
@@ -78,7 +76,6 @@ public class MainActivity extends Activity
 				//mediaPlayer.reset();
 				//mediaPlayer.release();
 				//mediaPlayer = null;
- 
 			}
  
 		});
@@ -88,7 +85,7 @@ public class MainActivity extends Activity
 	public void addListenerOnButtonChUp() 
 	{
 		
-		Button buttonChUp = (Button) findViewById(R.id.ButtonChUp);
+		Button buttonChUp = (Button) findViewById(R.id.buttonChUp);
  
 		buttonChUp.setOnClickListener(new OnClickListener() 
 		{
@@ -110,11 +107,9 @@ public class MainActivity extends Activity
 				
 				mediaPlayer.start(); // no need to call prepare(); create() does that for you
 				
- 
 			}
  
 		});
- 
 	}
 
 }
