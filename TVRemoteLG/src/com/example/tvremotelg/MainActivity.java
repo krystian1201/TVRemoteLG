@@ -55,8 +55,7 @@ public class MainActivity extends Activity
 			@Override
 			public void onClick(View arg0) 
 			{
-				//TextView textView1 = (TextView)findViewById(R.id.textView1);
-				//textView1.setText("lol");
+				
 				
 				//MediaPlayer mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.lg_power);
 				
