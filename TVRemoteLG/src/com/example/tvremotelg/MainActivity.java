@@ -30,6 +30,7 @@ public class MainActivity extends Activity
 		addListenerOnGivenButton(R.id.buttonVolUp, R.raw.lg_vol_up);
 		addListenerOnGivenButton(R.id.buttonVolDown, R.raw.lg_vol_down);
 		
+		//numerical keypad
 		addListenerOnGivenButton(R.id.button0, R.raw.lg_0);
 		addListenerOnGivenButton(R.id.button1, R.raw.lg_1);
 		addListenerOnGivenButton(R.id.button2, R.raw.lg_2);
