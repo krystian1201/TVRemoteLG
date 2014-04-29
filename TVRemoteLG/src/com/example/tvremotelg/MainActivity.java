@@ -26,6 +26,20 @@ public class MainActivity extends Activity
 		
 		addListenerOnGivenButton(R.id.buttonChUp, R.raw.lg_ch_up);
 		addListenerOnGivenButton(R.id.buttonChDown, R.raw.lg_ch_down);
+		
+		addListenerOnGivenButton(R.id.buttonVolUp, R.raw.lg_vol_up);
+		addListenerOnGivenButton(R.id.buttonVolDown, R.raw.lg_vol_down);
+		
+		addListenerOnGivenButton(R.id.button0, R.raw.lg_0);
+		addListenerOnGivenButton(R.id.button1, R.raw.lg_1);
+		addListenerOnGivenButton(R.id.button2, R.raw.lg_2);
+		addListenerOnGivenButton(R.id.button3, R.raw.lg_3);
+		addListenerOnGivenButton(R.id.button4, R.raw.lg_4);
+		addListenerOnGivenButton(R.id.button5, R.raw.lg_5);
+		addListenerOnGivenButton(R.id.button6, R.raw.lg_6);
+		addListenerOnGivenButton(R.id.button7, R.raw.lg_7);
+		addListenerOnGivenButton(R.id.button8, R.raw.lg_8);
+		addListenerOnGivenButton(R.id.button9, R.raw.lg_9);
 	}
 
 	@Override
