@@ -339,8 +339,9 @@ int layout abc_simple_decor 0x7f030017
 int layout activity_main 0x7f030018
 int layout support_simple_spinner_dropdown_item 0x7f030019
 int menu main 0x7f0d0000
-int raw lg_ch_up 0x7f050000
-int raw lg_power 0x7f050001
+int raw lg_ch_down 0x7f050000
+int raw lg_ch_up 0x7f050001
+int raw lg_power 0x7f050002
 int string abc_action_bar_home_description 0x7f0b0001
 int string abc_action_bar_up_description 0x7f0b0002
 int string abc_action_menu_overflow_description 0x7f0b0003

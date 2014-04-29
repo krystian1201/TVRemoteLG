@@ -14,7 +14,6 @@ import android.widget.Button;
 public class MainActivity extends Activity
 {
 
-	//MediaPlayer mediaPlayer;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
@@ -22,10 +21,11 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		//mediaPlayer = MediaPlayer.create(this, R.raw.lg_power);
 		
-		addListenerOnButtonPower();
-		addListenerOnButtonChUp();
+		addListenerOnGivenButton(R.id.buttonPower, R.raw.lg_power);
+		
+		addListenerOnGivenButton(R.id.buttonChUp, R.raw.lg_ch_up);
+		addListenerOnGivenButton(R.id.buttonChDown, R.raw.lg_ch_down);
 	}
 
 	@Override
@@ -35,57 +35,11 @@ public class MainActivity extends Activity
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-	/*@Override public void onDestroy() 
-	{
-	       //set here the media volume back to the level it was
-			//before starting the application
-			//I don't know if this is necessary
-	}*/
-
 	
-	public void addListenerOnButtonPower() 
+	public void addListenerOnGivenButton(int buttonID, final int wavFileID) 
 	{
 		
-		Button buttonPower = (Button) findViewById(R.id.buttonPower);
- 
-		buttonPower.setOnClickListener(new OnClickListener() 
-		{
- 
-			@Override
-			public void onClick(View arg0) 
-			{
-				
-				//MediaPlayer mediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.lg_power);
-				//mediaPlayer.setVolume(0.9f, 0.9f);
-				//mediaPlayer.setDataSource(getBaseContext(), new Uri(R.raw.lg_ch_up));
-				
-				final MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.lg_power);
-			
-				mediaPlayer.setOnCompletionListener(new OnCompletionListener() 
-				{
-		             @Override
-		             public void onCompletion(MediaPlayer mp) 
-		             {
-		            	 mediaPlayer.release();
-		             }
-		          });   
-				
-				mediaPlayer.start(); // no need to call prepare(); create() does that for you
-				
-				//mediaPlayer.reset();
-				//mediaPlayer.release();
-				//mediaPlayer = null;
-			}
- 
-		});
- 
-	}
-	
-	public void addListenerOnButtonChUp() 
-	{
-		
-		Button buttonChUp = (Button) findViewById(R.id.buttonChUp);
+		Button buttonChUp = (Button) findViewById(buttonID);
  
 		buttonChUp.setOnClickListener(new OnClickListener() 
 		{
@@ -94,7 +48,7 @@ public class MainActivity extends Activity
 			public void onClick(View arg0) 
 			{
 				
-				final MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.lg_ch_up);
+				final MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), wavFileID);
 			
 				mediaPlayer.setOnCompletionListener(new OnCompletionListener() 
 				{
@@ -111,5 +65,5 @@ public class MainActivity extends Activity
  
 		});
 	}
-
+	
 }
