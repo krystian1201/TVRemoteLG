@@ -1077,7 +1077,11 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int ic_launcher=0x7f020057;
+        public static final int background_black1=0x7f020057;
+        public static final int background_black2=0x7f020058;
+        public static final int default_button=0x7f020059;
+        public static final int ic_launcher=0x7f02005a;
+        public static final int power_button1=0x7f02005b;
     }
     public static final class id {
         public static final int action_bar=0x7f06001c;
@@ -1091,12 +1095,13 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f060016;
         public static final int action_menu_presenter=0x7f060017;
         public static final int action_mode_close_button=0x7f060024;
-        public static final int action_settings=0x7f06004f;
+        public static final int action_settings=0x7f060051;
         public static final int activity_chooser_view_content=0x7f060025;
         public static final int always=0x7f06000b;
         public static final int beginning=0x7f060011;
         public static final int button0=0x7f06004e;
         public static final int button1=0x7f060043;
+        public static final int button10=0x7f06004f;
         public static final int button2=0x7f060044;
         public static final int button3=0x7f060045;
         public static final int button4=0x7f060047;
@@ -1125,6 +1130,7 @@ containing a value of this type.
         public static final int icon=0x7f06002a;
         public static final int ifRoom=0x7f06000a;
         public static final int image=0x7f060027;
+        public static final int imageButton1=0x7f060050;
         public static final int listMode=0x7f060001;
         public static final int list_item=0x7f060029;
         public static final int middle=0x7f060012;

@@ -21,6 +21,7 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//android:background="@android:color/black"
 		
 		addListenerOnGivenButton(R.id.buttonPower, R.raw.lg_power);
 		
