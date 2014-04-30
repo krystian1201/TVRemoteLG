@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class MainActivity extends Activity
@@ -21,9 +22,8 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		//android:background="@android:color/black"
 		
-		addListenerOnGivenButton(R.id.buttonPower, R.raw.lg_power);
+		//addListenerOnGivenButton(R.id.imageButtonPower, R.raw.lg_power);
 		
 		addListenerOnGivenButton(R.id.buttonChUp, R.raw.lg_ch_up);
 		addListenerOnGivenButton(R.id.buttonChDown, R.raw.lg_ch_down);
@@ -42,6 +42,9 @@ public class MainActivity extends Activity
 		addListenerOnGivenButton(R.id.button7, R.raw.lg_7);
 		addListenerOnGivenButton(R.id.button8, R.raw.lg_8);
 		addListenerOnGivenButton(R.id.button9, R.raw.lg_9);
+		
+		ImageButton myImageButton = (ImageButton) findViewById(R.id.imageButtonPower);
+		myImageButton.setOnTouchListener(new ButtonHighlighterOnTouchListener(myImageButton));
 	}
 
 	@Override
@@ -55,9 +58,9 @@ public class MainActivity extends Activity
 	public void addListenerOnGivenButton(int buttonID, final int wavFileID) 
 	{
 		
-		Button buttonChUp = (Button) findViewById(buttonID);
+		Button button = (Button) findViewById(buttonID);
  
-		buttonChUp.setOnClickListener(new OnClickListener() 
+		button.setOnClickListener(new OnClickListener() 
 		{
  
 			@Override
