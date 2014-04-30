@@ -22,37 +22,9 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		//image buttons
-		addListenerOnGivenImageButton(R.id.imageButtonPower, R.raw.lg_power);
-		addListenerOnGivenImageButton(R.id.imageButtonVolUp, R.raw.lg_vol_up);
-		addListenerOnGivenImageButton(R.id.imageButtonVolDown, R.raw.lg_vol_down);
+		addListenersOnAllButtons();
 		
-		
-		//ordinary buttons
-		addListenerOnGivenButton(R.id.buttonChUp, R.raw.lg_ch_up);
-		addListenerOnGivenButton(R.id.buttonChDown, R.raw.lg_ch_down);
-		
-		
-		//numerical keypad
-		addListenerOnGivenButton(R.id.button0, R.raw.lg_0);
-		addListenerOnGivenButton(R.id.button1, R.raw.lg_1);
-		addListenerOnGivenButton(R.id.button2, R.raw.lg_2);
-		addListenerOnGivenButton(R.id.button3, R.raw.lg_3);
-		addListenerOnGivenButton(R.id.button4, R.raw.lg_4);
-		addListenerOnGivenButton(R.id.button5, R.raw.lg_5);
-		addListenerOnGivenButton(R.id.button6, R.raw.lg_6);
-		addListenerOnGivenButton(R.id.button7, R.raw.lg_7);
-		addListenerOnGivenButton(R.id.button8, R.raw.lg_8);
-		addListenerOnGivenButton(R.id.button9, R.raw.lg_9);
-		
-		ImageButton myImageButton = (ImageButton) findViewById(R.id.imageButtonPower);
-		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
-		
-		myImageButton = (ImageButton) findViewById(R.id.imageButtonVolUp);
-		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
-		
-		myImageButton = (ImageButton) findViewById(R.id.imageButtonVolDown);
-		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		setImageButtonsHighlighting();
 	}
 
 	@Override
@@ -63,34 +35,80 @@ public class MainActivity extends Activity
 		return true;
 	}
 	
-	public void addListenerOnGivenButton(int buttonID, final int wavFileID) 
+	public void addListenersOnAllButtons()
 	{
+		//ordinary buttons
+		addListenerOnGivenImageButton(R.id.imageButtonPower, R.raw.lg_power);
+		addListenerOnGivenImageButton(R.id.imageButtonVolUp, R.raw.lg_vol_up);
+		addListenerOnGivenImageButton(R.id.imageButtonVolDown, R.raw.lg_vol_down);
+		addListenerOnGivenImageButton(R.id.imageButtonChUp, R.raw.lg_ch_up);
+		addListenerOnGivenImageButton(R.id.imageButtonChDown, R.raw.lg_ch_down);
+
 		
-		Button button = (Button) findViewById(buttonID);
- 
-		button.setOnClickListener(new OnClickListener() 
-		{
- 
-			@Override
-			public void onClick(View arg0) 
-			{
-				
-				final MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), wavFileID);
-			
-				mediaPlayer.setOnCompletionListener(new OnCompletionListener() 
-				{
-		             @Override
-		             public void onCompletion(MediaPlayer mp) 
-		             {
-		            	 mediaPlayer.release();
-		             }
-		          });  
-				
-				mediaPlayer.start(); // no need to call prepare(); create() does that for you
-			}
- 
-		});
+		addListenerOnGivenImageButton(R.id.imageButton0, R.raw.lg_0);
+		addListenerOnGivenImageButton(R.id.imageButton1, R.raw.lg_1);
+		addListenerOnGivenImageButton(R.id.imageButton2, R.raw.lg_2);
+		addListenerOnGivenImageButton(R.id.imageButton3, R.raw.lg_3);
+		addListenerOnGivenImageButton(R.id.imageButton4, R.raw.lg_4);
+		addListenerOnGivenImageButton(R.id.imageButton5, R.raw.lg_5);
+		addListenerOnGivenImageButton(R.id.imageButton6, R.raw.lg_6);
+		addListenerOnGivenImageButton(R.id.imageButton7, R.raw.lg_7);
+		addListenerOnGivenImageButton(R.id.imageButton8, R.raw.lg_8);
+		addListenerOnGivenImageButton(R.id.imageButton9, R.raw.lg_9);
+		
 	}
+	
+	//set ImageButtons to be highlighted when they are clicked
+	public void setImageButtonsHighlighting()
+	{
+		//ordinary buttons
+		ImageButton myImageButton = (ImageButton) findViewById(R.id.imageButtonPower);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+
+		myImageButton = (ImageButton) findViewById(R.id.imageButtonVolUp);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+
+		myImageButton = (ImageButton) findViewById(R.id.imageButtonVolDown);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+
+		myImageButton = (ImageButton) findViewById(R.id.imageButtonChUp);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+
+		myImageButton = (ImageButton) findViewById(R.id.imageButtonChDown);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		//numerical keypad
+		myImageButton = (ImageButton) findViewById(R.id.imageButton0);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton1);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton2);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton3);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton4);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton5);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton6);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton7);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton8);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButton9);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+	}
+
 	
 	public void addListenerOnGivenImageButton(int imageButtonID, final int wavFileID) 
 	{

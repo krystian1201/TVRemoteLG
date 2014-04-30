@@ -2,81 +2,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background_black2"
+    android:background="@drawable/background_black4"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <ImageButton
-        android:id="@+id/imageButtonPower"
-        style="@style/MyImageButtonStyle"
-        android:layout_alignLeft="@+id/buttonChUp"
-        android:layout_alignParentTop="true"
-        android:background="@null"
-        android:scaleType="centerInside"
-        android:src="@drawable/power_button1" />
-    
-    <Button
-        android:id="@+id/buttonChUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonChDown"
-        android:layout_below="@+id/imageButtonPower"
-        android:layout_marginTop="29dp"
-        android:text="+ \n  CH  " />
-    
-     <Button
-        android:id="@+id/buttonChDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tableLayout1"
-        android:layout_below="@+id/buttonChUp"
-        android:text="- \n  CH  " />  
-     
-    <ImageButton
-        android:id="@+id/imageButtonVolDown"
-        style="@style/MyImageButtonStyle"
-        android:layout_above="@+id/tableLayout1"
-        android:layout_alignRight="@+id/tableLayout1"
-        android:background="@null"
-        android:scaleType="centerInside"
-        android:src="@drawable/minus1_2" />
-
-    
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/buttonChDown"
-        android:layout_marginTop="10dp" >
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
 
         <TableRow
             android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="5dip" >
+            >
 
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="48dp"
-                android:layout_height="wrap_content"
-                android:text="  1  " />
+            <ImageButton
+                android:id="@+id/imageButton1"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black1_1_2" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  2  " />
+            <ImageButton
+                android:id="@+id/imageButton2"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black2_1_2" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  3  " />
+            <ImageButton
+                android:id="@+id/imageButton3"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black3_1_2" />
         </TableRow>
 
         <TableRow
@@ -84,25 +44,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="5dip" >
+            >
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  4  " />
+            <ImageButton
+                android:id="@+id/imageButton4"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black4_1_2" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  5  " />
+            <ImageButton
+                android:id="@+id/imageButton5"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black5_1_2" />
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  6  " />
+            <ImageButton
+                android:id="@+id/imageButton6"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black6_1_2" />
+            
         </TableRow>
 
         <TableRow
@@ -110,25 +68,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="5dip" >
+         	>
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  7  " />
+            <ImageButton
+                android:id="@+id/imageButton7"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black7_1_2" />
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  8  " />
+            <ImageButton
+                android:id="@+id/imageButton8"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black8_1_2" />
 
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  9  " />
+            <ImageButton
+                android:id="@+id/imageButton9"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black9_1_2" />
         </TableRow>
 
         <TableRow
@@ -136,15 +91,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="5dip" >
+            >
 
-            <Button
-                android:id="@+id/button0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  0  " />
+            <ImageButton
+                android:id="@+id/imageButton0"
+                style="@style/MyNumericalButtonStyle"
+                android:src="@drawable/black0_1_2" />
         </TableRow>
-        
     </TableLayout>
 
     <ImageButton
@@ -152,18 +105,37 @@
         style="@style/MyImageButtonStyle"
         android:layout_alignLeft="@+id/imageButtonVolDown"
         android:layout_below="@+id/imageButtonPower"
-        android:background="@null"
-        android:scaleType="centerInside"
-        android:src="@drawable/plus1_3" />
+        android:paddingTop="10dip"
+        android:src="@drawable/black_plus1_2" />
 
-    <TextView
-        android:id="@+id/textViewVol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButtonVolDown"
-        android:layout_alignLeft="@+id/imageButtonVolDown"
-        android:text="Vol"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@android:color/white" />
+    <ImageButton
+        android:id="@+id/imageButtonChDown"
+        style="@style/MyImageButtonStyle"
+        android:layout_alignRight="@+id/tableLayout1"
+        android:layout_alignTop="@+id/imageButtonVolDown"
+        android:paddingTop="5dip"
+        android:src="@drawable/black_arrow_down1_2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonVolDown"
+        style="@style/MyImageButtonStyle"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:paddingTop="5dip"
+        android:src="@drawable/black_minus1_2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonChUp"
+        style="@style/MyImageButtonStyle"
+        android:layout_alignLeft="@+id/imageButtonChDown"
+        android:layout_alignTop="@+id/imageButtonVolUp"
+        android:src="@drawable/black_arrow_up1_2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPower"
+        style="@style/MyImageButtonStyle"
+        android:layout_alignLeft="@+id/imageButtonVolUp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/power_button1" />
 
 </RelativeLayout>
