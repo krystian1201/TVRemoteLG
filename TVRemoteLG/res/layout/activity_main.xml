@@ -9,30 +9,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <ImageButton
+        android:id="@+id/imageButtonPower"
+        style="@style/MyImageButtonStyle"
+        android:layout_alignLeft="@+id/buttonChUp"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/power_button1" />
+    
     <Button
-        android:id="@+id/buttonVolUp"
+        android:id="@+id/buttonChUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonChDown"
-        android:layout_alignLeft="@+id/buttonVolDown"
-        android:text="^\n    VOL   " />
-
-    <Button
-        android:id="@+id/buttonVolDown"
+        android:layout_alignLeft="@+id/buttonChDown"
+        android:layout_below="@+id/imageButtonPower"
+        android:layout_marginTop="29dp"
+        android:text="+ \n  CH  " />
+    
+     <Button
+        android:id="@+id/buttonChDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/buttonChDown"
-        android:layout_alignBottom="@+id/buttonChDown"
-        android:layout_alignParentRight="true"
-        android:text="   VOL  \nv" />
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:layout_below="@+id/buttonChUp"
+        android:text="- \n  CH  " />  
+     
+    <ImageButton
+        android:id="@+id/imageButtonVolDown"
+        style="@style/MyImageButtonStyle"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_alignRight="@+id/tableLayout1"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/minus1_2" />
 
+    
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/buttonChDown"
-        android:layout_marginTop="29dp" >
+        android:layout_marginTop="10dp" >
 
         <TableRow
             android:id="@+id/tableRow1"
@@ -113,7 +132,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow3"
+            android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -125,33 +144,26 @@
                 android:layout_height="wrap_content"
                 android:text="  0  " />
         </TableRow>
+        
     </TableLayout>
-"
-    <Button
-        android:id="@+id/buttonChUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonChDown"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="98dp"
-        android:text="+ \n  CH  " />
-
-    <Button
-        android:id="@+id/buttonChDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tableLayout1"
-        android:layout_below="@+id/buttonChUp"
-        android:text="- \n  CH  " />
 
     <ImageButton
-        android:id="@+id/imageButtonPower"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_alignLeft="@+id/buttonChUp"
-        android:layout_alignParentTop="true"
+        android:id="@+id/imageButtonVolUp"
+        style="@style/MyImageButtonStyle"
+        android:layout_alignLeft="@+id/imageButtonVolDown"
+        android:layout_below="@+id/imageButtonPower"
         android:background="@null"
         android:scaleType="centerInside"
-        android:src="@drawable/power_button1" />
+        android:src="@drawable/plus1_3" />
+
+    <TextView
+        android:id="@+id/textViewVol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButtonVolDown"
+        android:layout_alignLeft="@+id/imageButtonVolDown"
+        android:text="Vol"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

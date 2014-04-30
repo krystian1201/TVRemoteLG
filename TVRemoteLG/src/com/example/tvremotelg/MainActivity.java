@@ -22,14 +22,16 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		
+		//image buttons
 		addListenerOnGivenImageButton(R.id.imageButtonPower, R.raw.lg_power);
+		addListenerOnGivenImageButton(R.id.imageButtonVolUp, R.raw.lg_vol_up);
+		addListenerOnGivenImageButton(R.id.imageButtonVolDown, R.raw.lg_vol_down);
 		
+		
+		//ordinary buttons
 		addListenerOnGivenButton(R.id.buttonChUp, R.raw.lg_ch_up);
 		addListenerOnGivenButton(R.id.buttonChDown, R.raw.lg_ch_down);
 		
-		addListenerOnGivenButton(R.id.buttonVolUp, R.raw.lg_vol_up);
-		addListenerOnGivenButton(R.id.buttonVolDown, R.raw.lg_vol_down);
 		
 		//numerical keypad
 		addListenerOnGivenButton(R.id.button0, R.raw.lg_0);
@@ -44,6 +46,12 @@ public class MainActivity extends Activity
 		addListenerOnGivenButton(R.id.button9, R.raw.lg_9);
 		
 		ImageButton myImageButton = (ImageButton) findViewById(R.id.imageButtonPower);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButtonVolUp);
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
+		
+		myImageButton = (ImageButton) findViewById(R.id.imageButtonVolDown);
 		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
 	}
 

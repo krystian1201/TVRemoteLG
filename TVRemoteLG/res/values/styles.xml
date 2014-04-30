@@ -17,4 +17,9 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     
+    <style name="MyImageButtonStyle" parent="@android:style/Widget.ImageButton">
+		<item name="android:layout_width">70dip</item>
+		<item name="android:layout_height">70dip</item>
+	</style>
+    
 </resources>
