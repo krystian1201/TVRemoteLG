@@ -23,7 +23,7 @@ public class MainActivity extends Activity
 		setContentView(R.layout.activity_main);
 		
 		
-		//addListenerOnGivenButton(R.id.imageButtonPower, R.raw.lg_power);
+		addListenerOnGivenImageButton(R.id.imageButtonPower, R.raw.lg_power);
 		
 		addListenerOnGivenButton(R.id.buttonChUp, R.raw.lg_ch_up);
 		addListenerOnGivenButton(R.id.buttonChDown, R.raw.lg_ch_down);
@@ -44,7 +44,7 @@ public class MainActivity extends Activity
 		addListenerOnGivenButton(R.id.button9, R.raw.lg_9);
 		
 		ImageButton myImageButton = (ImageButton) findViewById(R.id.imageButtonPower);
-		myImageButton.setOnTouchListener(new ButtonHighlighterOnTouchListener(myImageButton));
+		myImageButton.setOnTouchListener(new ImageButtonHighlighterOnTouchListener(myImageButton));
 	}
 
 	@Override
@@ -79,7 +79,35 @@ public class MainActivity extends Activity
 		          });  
 				
 				mediaPlayer.start(); // no need to call prepare(); create() does that for you
+			}
+ 
+		});
+	}
+	
+	public void addListenerOnGivenImageButton(int imageButtonID, final int wavFileID) 
+	{
+		
+		ImageButton imageButton = (ImageButton) findViewById(imageButtonID);
+ 
+		imageButton.setOnClickListener(new OnClickListener() 
+		{
+ 
+			@Override
+			public void onClick(View arg0) 
+			{
 				
+				final MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), wavFileID);
+			
+				mediaPlayer.setOnCompletionListener(new OnCompletionListener() 
+				{
+		             @Override
+		             public void onCompletion(MediaPlayer mp) 
+		             {
+		            	 mediaPlayer.release();
+		             }
+		          });  
+				
+				mediaPlayer.start(); // no need to call prepare(); create() does that for you
 			}
  
 		});
